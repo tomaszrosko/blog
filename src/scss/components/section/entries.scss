@@ -1,0 +1,29 @@
+@use 'sass:math';
+@import './../../mixins/functions';
+@import '../../variables';
+@import '../common';
+
+.section-entries {
+    .container-fluid {
+        background-color: #F5F5F5;
+    }
+
+    .col-12 {
+        margin-bottom: 2rem;
+    }
+
+    .ic-right-arrow {
+        margin-left: .5rem;
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .section-entries {
+        .container-fluid, .col-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}

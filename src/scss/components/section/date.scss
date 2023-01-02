@@ -1,0 +1,59 @@
+@use 'sass:math';
+@import './../../mixins/functions';
+@import '../../variables';
+@import '../common';
+
+.section-date {
+    .container-fluid {
+        padding-top: rem(100px);
+        background-color: #F5F5F5;
+    }
+
+    h1 {
+        margin-top: 2rem;
+    }
+    .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .box-contact {
+        display: block;
+        border-left: 1px solid black;
+        a {
+            margin: 0.75rem 0;
+            color: #212529;
+        }
+        .link-footer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            text-decoration: none;
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+
+            }
+
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .section-date {
+        .box-contact {
+            border-left: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .section-date {
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}

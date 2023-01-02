@@ -1,0 +1,22 @@
+@use '../mixins/icons';
+
+$themeColor: 000000;
+
+:root {
+    --swiper-theme-color: #{$themeColor};
+    --swiper-preloader-color: var(--swiper-theme-color);
+}
+
+
+@import 'node_modules/swiper/swiper-vars';
+@import 'node_modules/swiper/swiper';
+@import 'node_modules/swiper/modules/lazy/lazy';
+@import 'node_modules/swiper/modules/grid/grid';
+
+.swiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    background: #fff;
+ }

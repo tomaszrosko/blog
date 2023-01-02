@@ -1,0 +1,22 @@
+@import './../variables';
+
+body {
+    .row > * {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: 0;
+    }
+}
+
+.btn {
+    &-more {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        color: black;
+        text-decoration: none;
+    }
+    &-border {
+        border: 1px solid black;
+    }
+}

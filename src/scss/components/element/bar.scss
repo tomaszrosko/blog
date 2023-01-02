@@ -1,0 +1,30 @@
+@use './../../mixins/functions';
+@import '../../variables';
+@import '../elements';
+
+.section-bar {
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .section-bar {
+
+        .bar {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+

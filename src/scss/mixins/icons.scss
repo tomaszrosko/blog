@@ -1,0 +1,58 @@
+$path-node-modules: '~/node_modules';
+
+//@mixin icon($icon, $width, $height, $block:inline-block, $color:false, $stroke:false) {
+//    $item: map-get(icons.$ic-icons, $icon);
+//    @if nth($item,1) == 'fontawesome' {
+//        @include icon-awesome(nth($item, 2), nth($item, 3), $width, $height, $block: inline-block, $color: false, $stroke: false);
+//    } @else if (nth($item,1) == 'material-design') {
+//        @include icon-material-design(nth($item, 2), nth($item, 3), $width, $height, $block: inline-block, $color: false, $stroke: false);
+//    } @else if (nth($item,1) == 'custom') {
+//        @include icon-custom(nth($item, 3), $width, $height, $block: inline-block, $color: false, $stroke: false);
+//    }
+//}
+
+@mixin icon-awesome($variant, $icon, $width, $height, $block:inline-block, $color:false, $stroke:false) {
+    // @todo działa z webpack, nie działa z sass
+    @include -generate-icon('#{$path-node-modules}/@fortawesome/fontawesome-free/svgs/#{$variant}/#{$icon}.svg', $width, $height, $block, $color, $stroke);
+}
+
+@mixin icon-material-design($variant, $icon, $width, $height, $block:inline-block, $color:false, $stroke:false) {
+    @include -generate-icon('#{$path-node-modules}/@material-icons/svg/svg/#{$icon}/#{$variant}.svg', $width, $height, $block, $color, $stroke);
+}
+
+@mixin icon-custom($icon,$width, $height, $block:inline-block, $color:false, $stroke:false) {
+    @include -generate-icon('./../img/svg/#{$icon}.svg', $width, $height, $block, $color, $stroke);
+}
+
+@mixin -generate-icon($image, $width, $height, $block:inline-block, $color:false, $stroke:false) {
+    background: {
+        size: contain;
+        repeat: no-repeat;
+        @if $color or $stroke {
+            @include fill-background-image($image, $color, $stroke);
+        } @else {
+            image: url($image); /* stylelint-disable-line property-no-unknown */
+        }
+    }
+    display: $block;
+    width: $width;
+    height: $height;
+}
+
+@mixin fill-background-image($url, $color, $stroke) {
+    @if $color == none {
+        $color: false;
+    }
+    @if $color and $stroke {
+        $base-color: str-slice(inspect($color), 2);
+        $stroke-color: str-slice(inspect($stroke), 2);
+        image: unquote('url("' + $url + '?fill=#' + $base-color + '&stroke=#' + $stroke-color + '")'); /* stylelint-disable-line property-no-unknown */
+    } @else if $color {
+        $base-color: str-slice(inspect($color), 2);
+        image: unquote('url("' + $url + '?fill=#' + $base-color + '&stroke=none")'); /* stylelint-disable-line property-no-unknown */
+    } @else if $stroke {
+        $stroke-color: str-slice(inspect($stroke), 2);
+        image: unquote('url("' + $url + '?stroke=#' + $stroke-color + '&fill=none")'); /* stylelint-disable-line property-no-unknown */
+    }
+}
+

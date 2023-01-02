@@ -1,0 +1,43 @@
+@use 'sass:math';
+@import './../../mixins/functions';
+@import '../../variables';
+@import '../common';
+
+.section-all-entries {
+
+    .box-entrys {
+        > .row {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+    }
+    .col-lg-8 {
+        padding-top: 1rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .section-all-entries {
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .box-entrys {
+            padding-right: 0;
+            padding-left: 0;
+
+        }
+
+        .col-lg-4 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+    }
+}

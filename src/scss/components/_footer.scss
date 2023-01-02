@@ -1,0 +1,41 @@
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
+@import './../variables';
+@import 'elements';
+
+
+footer {
+    .container-fluid {
+        position: relative;
+        height: 178px;
+        background: url('../img/svg/footer1.svg') repeat top left;
+        background-color: #F5F5F5;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .copyright {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+
+        span {
+
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    footer {
+        .container-fluid {
+            height: 100px;
+        }
+
+        .copyright {
+            bottom: 0;
+            left: auto;
+            transform: none;
+        }
+    }
+}

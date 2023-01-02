@@ -1,0 +1,219 @@
+@import './../variables';
+@import 'elements';
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 3.25rem;
+    background-color: $light-blue;
+
+    .nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ic-search {
+        margin-left: 1.25rem;
+    }
+
+    // Na potrzebę projektu
+    .offcanvas-body {
+        display: block !important;
+        overflow-y: auto !important;
+    }
+
+    .ic-logo {
+        //position: absolute;
+        //left: 40%;
+    }
+
+    //.offcanvas {
+    //    width: 85%;
+    //}
+
+    .offcanvas-header {
+        justify-content: space-between;
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid #eee;
+
+    }
+
+    .offcanvas-body {
+        position: relative;
+        display: flex;
+        padding: 0 1rem 1rem;
+        //flex-direction: column; -------------
+        //align-items: center;
+        //min-height: 800px;
+        overflow-y: hidden;
+
+        .ic-logo {
+            position: relative;
+            left: 0;
+        }
+
+        > div {
+            display: flex;
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+            justify-content: space-between;
+        }
+
+        a {
+            display: block;
+            padding: 0.6rem 0;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            @extend %color-silver-dark;
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        li.menu-new {
+            a {
+                color: #444743;
+            }
+        }
+
+    }
+
+    .offcanvas-footer {
+        padding: 1rem;
+        padding-bottom: 0;
+
+        .link-footer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-decoration: none;
+            border-top: 1px solid #eee;
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+
+            }
+
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #eee;
+
+        a {
+            display: block;
+            width: 50%;
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    a {
+        @extend %color-silver-dark;
+        font-weight: 700;
+    }
+
+    .e-mail {
+        display: block;
+        margin: 1rem 0 0;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 4rem;
+        text-align: center;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        padding-left: 1rem;
+
+        span {
+            margin-right: 1rem;
+        }
+
+    }
+
+    .list-social {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style-type: none;
+
+        li {
+            padding: 0;
+            //font-weight: 600;
+        }
+    }
+
+    .box-left {
+        @extend %color-silver-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+
+        .ic-logo {
+            margin-right: $grid-gutter-width / 4;
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav-item {
+        a {
+            padding: 0 1rem;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+    }
+
+    .nav-item:hover {
+        a {
+            color: #444743;
+            text-decoration: underline;
+        }
+    }
+
+    .nav-item:not(:last-child)::after {
+        content: '';
+        border-right: 2px solid $silver-dark;
+    }
+}
+
+@media (max-width: 575.98px) {
+    header {
+        .nav {
+            display: block;
+            text-align: center;
+
+        }
+    }
+}

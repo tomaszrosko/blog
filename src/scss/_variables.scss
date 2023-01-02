@@ -1,0 +1,32 @@
+$aspect-ratios: (
+    '1x1': 100%,
+    '16x9': calc(9 / 16 * 100%),
+    '632x474': calc(474 / 632 * 100%),
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$font-family-sans-serif: 'Roboto';
+
+
+// Colors
+
+$silver-light: #F5F5F5;
+$silver-dark: #93a4af;
+$green: #28e528;
+$light-blue: #b9dbe2;
+
+
+
+// Font-colors
+
+%color {
+    &-silver-dark {
+        color: $silver-dark;
+    }
+    &-green {
+        color: $green;
+    }
+    &-light-blue {
+        color: $light-blue;
+    }
+}

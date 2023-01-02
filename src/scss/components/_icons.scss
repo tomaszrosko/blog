@@ -1,0 +1,28 @@
+@import './../mixins/icons';
+
+.ic {
+    &-burger-nav {
+        @include icon-custom('burger-nav', 24px, 24px);
+    }
+    &-logo {
+        @include icon-custom('logo', 24px, 20px);
+    }
+    &-logo-black {
+        @include icon-custom('logo-black', 24px, 20px);
+    }
+    &-message {
+        @include icon-custom('message', 24px, 24px);
+    }
+    &-mobile {
+        @include icon-custom('mobile', 24px, 24px);
+    }
+    &-phone {
+        @include icon-custom('phone', 24px, 24px);
+    }
+    &-right-arrow {
+        @include icon-custom('right-arrow', 15px, 7px);
+    }
+    &-footer {
+        @include icon-custom('footer', 2107px, 435px);
+    }
+}

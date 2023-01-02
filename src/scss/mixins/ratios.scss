@@ -1,0 +1,7 @@
+@mixin make-ratio-custom($aspect-ratios, $variable-prefix) {
+    @each $key, $ratio in $aspect-ratios {
+        .ratio-#{$key} {
+            --#{$variable-prefix}aspect-ratio: #{$ratio};
+        }
+    }
+}

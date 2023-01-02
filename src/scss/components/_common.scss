@@ -1,0 +1,24 @@
+@use 'sass:math';
+@import '../mixins/functions';
+@import '../variables';
+
+h1 {
+    @include font-size(rem(38px));
+    @include rfs(rem(48px), line-height);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        padding: 0 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.2rem;
+        color: #656464;
+        border: 1px solid #656464;
+        border-radius: 10px;
+    }
+}
+

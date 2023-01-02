@@ -1,0 +1,17 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.idea/
+/style
+style.css.map
+/scripts
+*.map
+/css
+node_modules
+package-lock.json
+.build
+/node_modules
+dist
+/dist
+
