@@ -191,16 +191,35 @@ header {
 
     .nav-item {
         a {
-            padding: 0 1rem;
+            margin: 0 1rem;
             text-decoration: none;
             transition: 0.5s;
+            position : relative;
+            display : inline-block;
         }
+        a::after {
+            content : "";
+            position : absolute;
+            width : 100%;
+            height : 1px;
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            transform : scaleX(0);
+            transform-origin: bottom right;
+            transition : transform 0.25s linear;
+        }
+        a:hover::after {
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+
     }
 
     .nav-item:hover {
         a {
             color: #444743;
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
 
