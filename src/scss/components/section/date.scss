@@ -28,8 +28,10 @@
             position: relative;
             display: flex;
             align-items: center;
-            justify-content: start;
+            justify-content: end;
             text-decoration: none;
+            unicode-bidi: bidi-override;
+            direction: rtl;
 
             span {
                 display: flex;
