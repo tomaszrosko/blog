@@ -6,11 +6,12 @@
 footer {
     .container-fluid {
         position: relative;
-        height: 178px;
-        background: url('../img/svg/footer1.svg') repeat top left;
-        background-color: #F5F5F5;
+        height: 150px;
+        background: url('../img/svg/tatry.svg') repeat top left;
+        background-color: $mountain-heaven;
         background-repeat: no-repeat;
         background-size: cover;
+        @extend %color-black;
     }
 
     .copyright {
@@ -19,18 +20,62 @@ footer {
         left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
-
-        span {
-
+    }
+}
+@include media-breakpoint-down(md) {
+    footer {
+        .container-fluid {
+            background: url('../img/svg/tatry-576.svg') repeat top left;
+            background-color: $mountain-heaven;
+            height: 100px;
+        }
+    }
+}
+@include media-breakpoint-only(md) {
+    footer {
+        .container-fluid {
+            background: url('../img/svg/tatry-768.svg') repeat top left;
+            background-color: $mountain-heaven;
+            height: 100px;
+        }
+    }
+}
+@include media-breakpoint-only(lg) {
+    footer {
+        .container-fluid {
+            background: url('../img/svg/tatry-992.svg') repeat top left;
+            background-color: $mountain-heaven;
+            height: 100px;
+        }
+    }
+}
+@include media-breakpoint-only(xl) {
+    footer {
+        .container-fluid {
+            background: url('../img/svg/tatry-1200.svg') repeat top left;
+            background-color: $mountain-heaven;
+            height: 100px;
+        }
+    }
+}
+@include media-breakpoint-only(xl) {
+    footer {
+        .container-fluid {
+            background: url('../img/svg/tatry-1400.svg') repeat top left;
+            background-color: $mountain-heaven;
+            height: 100px;
         }
     }
 }
 
+
 @include media-breakpoint-down(sm) {
     footer {
-        .container-fluid {
-            height: 100px;
-        }
+        //.container-fluid {
+        //    background: url('../img/svg/tatry-576.svg') repeat top left;
+        //    background-color: $mountain-heaven;
+        //    height: 100px;
+        //}
 
         .copyright {
             bottom: 0;

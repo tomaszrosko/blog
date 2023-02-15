@@ -20,7 +20,10 @@
         @include icon-custom('phone', 24px, 24px);
     }
     &-right-arrow {
-        @include icon-custom('right-arrow', 15px, 7px);
+        @include icon-custom('right-arrow', 15px, 8px);
+    }
+    &-right-arrow-white {
+        @include icon-custom('right-arrow-white', 15px, 8px);
     }
     &-footer {
         @include icon-custom('footer', 2107px, 435px);

@@ -5,13 +5,14 @@
 
 .section-date {
     .container-fluid {
-        padding-top: rem(100px);
-        background-color: #F5F5F5;
+        background-color: $mountain-heaven;
+        padding-top: 2rem;
     }
 
     h1 {
         margin-top: 2rem;
     }
+
     .title {
         font-size: 1.5rem;
         font-weight: 700;
@@ -20,18 +21,17 @@
     .box-contact {
         display: block;
         border-left: 1px solid black;
+
         a {
             margin: 0.75rem 0;
             color: #212529;
         }
+
         .link-footer {
             position: relative;
             display: flex;
             align-items: center;
-            justify-content: end;
             text-decoration: none;
-            unicode-bidi: bidi-override;
-            direction: rtl;
 
             span {
                 display: flex;
@@ -40,9 +40,24 @@
 
             }
 
+            p {
+                unicode-bidi: bidi-override;
+                direction: rtl;
+                margin-bottom: 0;
+            }
         }
     }
 }
+@include media-breakpoint-only(md){
+    .section-date {
+        .box-contact {
+            p {
+                font-size: rem(12px);
+            }
+        }
+    }
+}
+
 @include media-breakpoint-down(md) {
     .section-date {
         .box-contact {

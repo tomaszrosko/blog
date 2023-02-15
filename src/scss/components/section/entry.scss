@@ -18,6 +18,14 @@
         padding: 1rem 0;
         font-weight: 600;
     }
+    .col-12 {
+        p {
+            margin-bottom: 0.6rem;
+        }
+        .box-info {
+            margin-bottom: 0;
+        }
+    }
 }
 
 @include media-breakpoint-down(sm) {

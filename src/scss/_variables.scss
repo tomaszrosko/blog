@@ -2,6 +2,8 @@ $aspect-ratios: (
     '1x1': 100%,
     '16x9': calc(9 / 16 * 100%),
     '632x474': calc(474 / 632 * 100%),
+    'tatry': calc( 213 / 2400 * 100%),
+
 );
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -14,7 +16,12 @@ $silver-light: #F5F5F5;
 $silver-dark: #93a4af;
 $green: #28e528;
 $light-blue: #b9dbe2;
-
+$nav-bc: #065578;
+$nav-font: #b8dced;
+$section-bc: #fafdff;
+$mountain-heaven: #eff8ff;
+$black-color: #000;
+$white-color:#fff;
 
 
 // Font-colors
@@ -23,10 +30,22 @@ $light-blue: #b9dbe2;
     &-silver-dark {
         color: $silver-dark;
     }
+
     &-green {
         color: $green;
     }
+
     &-light-blue {
         color: $light-blue;
+    }
+
+    &-font-nav {
+        color: $nav-font;
+    }
+    &-black {
+        color: $black-color;
+    }
+    &-white {
+        color: $white-color;
     }
 }

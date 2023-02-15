@@ -15,6 +15,23 @@ body {
         padding: 0.5rem;
         color: black;
         text-decoration: none;
+        background: linear-gradient(#000 0 0) 0% calc(-3px - 100%) /var(--d, 0%) 200% no-repeat;
+        transition: 0.3s, background-size 0.3s 0.3s;
+
+        .ic-right-arrow {
+            transition-duration: 0.5s;
+        }
+    }
+
+    &-more:hover {
+        --d: 100%;
+        background-position: 50% 0%;
+        color: #fff;
+        transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+
+        .ic-right-arrow {
+            @extend .ic-right-arrow-white;
+        }
     }
 
     &-border {
@@ -23,22 +40,25 @@ body {
 }
 
 // Flag
-.flag-title {
+.flag-title-dark {
     position: absolute;
-    top: 10%;
+    top: 2%;
+    margin-top: 0.2rem;;
     padding: 0.2rem;
-    color: #28e528;
-    background-color: rgb(211,211,211,0.5);
+    @extend %color-white;
+    //background-color: rgb(211, 211, 211, 0.5);
+    background-color: $black-color;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
 }
 
-.flag-describe {
+.flag-title-bright {
     position: absolute;
-    top: 30%;
+    top: 2%;
     padding: 0.2rem;
-    color: yellow;
-    background-color: rgb(0, 42, 255, 0.4);
+    @extend %color-black;
+    //background-color: rgb(211, 211, 211, 0.5);
+    background-color: $white-color;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
 }
@@ -48,8 +68,8 @@ body {
     right: 2%;
     bottom: 2%;
     padding: 0.2rem;
-    font-size: 8px;
-    line-height: 8px;
-    color: #F5F5F5;
+    font-size: 16px;
+    line-height: 16px;
+    @extend %color-white;
 }
 
