@@ -1,24 +1,14 @@
-// import Swiper, {Grid, Navigation, Pagination} from 'swiper';
-//
-// window.addEventListener("load", (e) => {
-//     new Swiper(".swiper-how", {
-//         // modules: [Grid, Pagination],
-//         slideClass: 'product-miniature',
-//         slidesPerView: "auto",
-//         freeMode: true,
-//         spaceBetween: 30,
-//         loop: true
-//     });
-//     new Swiper(".swiper-producers", {
-//         modules: [Grid, Pagination],
-//         slidesPerView: 2,
-//         spaceBetween: 16,
-//         grid: {
-//             rows: 2
-//         },
-//         pagination: {
-//             el: '.swiper-producers-pagination',
-//             clickable: true
-//         }
-//     });
-// });
+const menuItems = document.querySelectorAll(".menuItem")
+const activeShow = document.querySelector('.offcanvas-end')
+const backdropShow = document.getElementsByClassName("offcanvas-backdrop")
+
+const handle = () => {
+    if (activeShow.classList.contains("show") && backdropShow[0].classList.contains("show"))  {
+        activeShow.classList.remove("show")
+        backdropShow[0].classList.remove("show")
+    }
+}
+
+for (const elementA of menuItems) {
+    elementA.addEventListener("click", handle);
+}
