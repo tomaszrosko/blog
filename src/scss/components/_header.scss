@@ -70,7 +70,7 @@ header {
 
         .active {
             a {
-                color: #28e528;
+                @extend %color-black;
             }
         }
 
