@@ -7,7 +7,7 @@ const observerActive = () => {
 
         setTimeout(() => {
             let adres = location.href;
-            let adress = adres.replace("https://mabb44.netlify.app/", "");
+            let adress = adres.replace("https://magdalenarosko.pl/", "");
 
             if (adress === "all-entries.html") {
                 menuItems2.classList.add("active")

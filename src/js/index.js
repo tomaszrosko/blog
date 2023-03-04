@@ -32,7 +32,8 @@ const observerActive = () => {
     }
     setTimeout(() => {
         let adres = location.href;
-        let adress = adres.replace("https://mabb44.netlify.app/", "");
+        let adress = adres.replace("https://magdalenarosko.pl/", "");
+        // let adress = adres.replace("http://localhost:9000/", "");
 
         if (adress === "index.html" || adress === "") {
             menuItems1.classList.add("active")
