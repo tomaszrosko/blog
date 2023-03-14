@@ -7,6 +7,9 @@
     &-logo {
         @include icon-custom('logo', 24px, 20px);
     }
+    &-logo-nav {
+        @include icon-custom('logo-nav', 24px, 20px);
+    }
     &-logo-black {
         @include icon-custom('logo-black', 24px, 20px);
     }
