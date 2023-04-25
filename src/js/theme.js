@@ -13,6 +13,11 @@ const activeShow = document.querySelector('.offcanvas-end')
 const backdropShow = document.getElementsByClassName("offcanvas-backdrop")
 const bodyStyle = document.querySelector('body')
 
+//color active
+const menuItems1 = document.querySelector('.one')
+const menuItems2 = document.querySelector('.two')
+const menuItems3 = document.querySelector('.three')
+const menuItems4 = document.querySelector('.four')
 
 //burger
 
@@ -27,31 +32,22 @@ const handle = () => {
 for (const elementA of menuItems) {
     elementA.addEventListener("click", handle);
 }
-
-
-//color active
-const menuItems1 = document.querySelector('.one')
-const menuItems2 = document.querySelector('.two')
-const menuItems3 = document.querySelector('.three')
-const menuItems4 = document.querySelector('.four')
-
 const observerActive = () => {
     for (let i = 0; i < menuItems.length; i++) {
         (menuItems[i].classList.remove("active"))
         console.log(menuItems[i])
     }
     setTimeout(() => {
-        let adres = location.href;
-        let adress = adres.replace("https://magdalenarosko.pl/", "");
-        // let adress = adres.replace("http://localhost:9000/", "");
+        let locationObject = location.href;
+        let adressSearch = locationObject.replace("https://magdalenarosko.pl/", "");
 
-        if (adress === "index.html" || adress === "") {
+        if (adressSearch === "index.html" || adressSearch === "") {
             menuItems1.classList.add("active")
-        } else if (adress === "all-entries.html") {
+        } else if (adressSearch === "all-entries.html") {
             menuItems2.classList.add("active")
-        } else if (adress === "index.html#about") {
+        } else if (adressSearch === "index.html#about") {
             menuItems3.classList.add("active")
-        } else if (adress === "index.html#contact") {
+        } else if (adressSearch === "index.html#contact") {
             menuItems4.classList.add("active")
         }
     }, 1200)
