@@ -169,6 +169,16 @@ header {
         .ic-logo {
             margin-right: $grid-gutter-width / 4;
         }
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            &:hover {
+                @extend %color-font-nav;
+            }
+        }
     }
 
     .navbar-nav {
